@@ -11,10 +11,6 @@ cgitb.enable()
 print "Content-Type: text/xml"
 print
 
-form = cgi.FieldStorage()
-
-
-
 currentPath = os.getcwd()
 basePath = os.path.basename(currentPath)
 files = []
@@ -47,4 +43,3 @@ for file in files:
 	channel.appendChild(item)
 
 print doc.toprettyxml()
-
